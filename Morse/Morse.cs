@@ -74,28 +74,14 @@ namespace Morse
 			_userCharacter = Console.ReadKey().KeyChar;
 		}
 
-		private bool CompareCharacter ()
-		{
-			if (_userCharacter == _character[0]) 
-			{
-				return true;
-			} else 
-			{
-				return false;
-			}
-		}
-
 		private void CheckAnswer ()
 		{
-			if (CompareCharacter ())
+			if (_userCharacter == _character[0])
 			{
 				Console.WriteLine (" correct!");
-			} else if (_userCharacter == ' ')
+			} else 
 			{
-				Console.WriteLine ("\n" + _character);
-			} else
-			{
-				CheckAnswer ();
+				Console.WriteLine (" | (" + _character[0] + ")");
 			}
 		}
 

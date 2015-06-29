@@ -44,5 +44,8 @@
     <None Include="InternationalMorse.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="InternationalMorseNumbers.txt" />
+    <None Include="InternationalMorseLetters.txt" />
+    <None Include="InternationalMorsePunctuation.txt" />
   </ItemGroup>
 </Project>

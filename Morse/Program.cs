@@ -7,6 +7,10 @@ namespace Morse
 		public static void Main (string[] args)
 		{
 			Morse morse = new Morse(".//InternationalMorse.txt");
+			while (true)
+			{
+				morse.RunTextOnly ();
+			}		
 		}
 	}
 }

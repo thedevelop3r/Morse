@@ -5,6 +5,9 @@ namespace Morse
 {
 	class MainClass
 	{
+
+		public const versionID = "v0.1";
+
 		public static void Main (string[] args)
 		{
 			Sound sineWave = new Sound ("Sound/dit.wav", "Sound/dah.wav");

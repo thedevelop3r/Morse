@@ -6,7 +6,7 @@ namespace Morse
 	class MainClass
 	{
 
-		public const versionID = "v0.1";
+		public const string versionID = "v0.1";
 
 		public static void Main (string[] args)
 		{

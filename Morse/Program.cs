@@ -1,4 +1,5 @@
 using System;
+using System.Media;
 
 namespace Morse
 {
@@ -6,11 +7,15 @@ namespace Morse
 	{
 		public static void Main (string[] args)
 		{
-			Morse morse = new Morse(".//InternationalMorse.txt");
+			Sound sineWave = new Sound ("Sound/dit.wav", "Sound/dah.wav");
+			Morse morse = new Morse("InternationalMorse.txt", sineWave);
+
 			while (true)
 			{
-				morse.RunTextOnly ();
-			}		
+				morse.RunAll ();
+				System.Threading.Thread.Sleep (200);
+			}
+
 		}
 	}
 }

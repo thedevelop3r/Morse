@@ -13,12 +13,16 @@ namespace Morse
 		private string _code;
 		private char _userCharacter;
 
+		//audio vars
+		private Sound _sound;
+
 		private Random _random = new Random ();
 
 
-		public Morse (string file)
+		public Morse (string file, Sound sound)
 		{
 			this._file = file;
+			this._sound = sound;
 			ParseMorse ();
 		}
 
@@ -34,13 +38,37 @@ namespace Morse
 
 		public void RunSoundOnly()
 		{
-
+			GetRandomCharacter ();
+			GetCode ();
+			PlaySound ();
+			GetUserCharacter ();
+			CheckAnswer ();
 		}
 
 		public void RunAll()
 		{
-
+			GetRandomCharacter ();
+			GetCode ();
+			PlaySound ();
+			Console.WriteLine (_code);
+			GetUserCharacter ();
+			CheckAnswer ();
 		}
+
+		private void PlaySound()
+		{
+			foreach (char element in _code)
+			{
+				if (element == '_')
+				{
+					_sound.PlayDah ();
+				} else
+				{
+					_sound.PlayDit ();
+				}
+			}
+		}
+
 
 		//Parses morse from selected file
 		public void ParseMorse (string file)

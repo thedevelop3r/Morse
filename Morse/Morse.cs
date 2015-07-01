@@ -112,8 +112,6 @@ namespace Morse
 				Console.WriteLine (" | (" + _character[0] + ")");
 			}
 		}
-
-
 	}
 }
 
